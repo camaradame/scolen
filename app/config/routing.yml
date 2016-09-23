@@ -1,0 +1,3 @@
+ecole_front:
+    resource: "@EcoleFrontBundle/Resources/config/routing.yml"
+    prefix:   /
