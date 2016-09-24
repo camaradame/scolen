@@ -1,0 +1,26 @@
+{
+  "name": "scolen",
+  "homepage": "https://github.com/adashbob/scolen",
+  "authors": [
+    "adasbob",
+    "camaradame"
+  ],
+  "description": "A web project",
+  "main": "bower.json",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "web/node_modules",
+    "web/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "3.3.7",
+    "html5shiv": "3.7.3",
+    "respond": "1.4.2",
+    "jquery-ui": "1.12.1",
+    "fullcalendar": "3.0.0"
+  }
+}

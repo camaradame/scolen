@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}EcoleFrontBundle:Ecole:index{% endblock %}
+
+{% block body %}
+<h1>Les écoles sénégalaises</h1>
+
+    <table>
+        <thead>
+            <th>Nom</th>
+            <th>Adresse</th>
+            <th>Département</th>
+            <th>Région</th>
+        </thead>
+        <tbody>
+            {% for entity in entities %}
+            <tr>
+                <td>{{ entity.nom }}</td>
+                <td>{{ entity.adresse }}</td>
+                <td>{{ entity.departement }}</td>
+                <td>{{ entity.region }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

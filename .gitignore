@@ -15,6 +15,7 @@
 /vendor/
 /web/bundles/
 /.idea
+/web/bower_components
 Supprimerait .gitignore
 Supprimerait .idea/
 Supprimerait README.md
@@ -27,3 +28,10 @@ Supprimerait src/
 Supprimerait tests/
 Supprimerait var/
 Supprimerait web/
+Supprimerait bower.json
+Supprimerait bower_components/
+Supprimerait src/Ecole/FrontBundle/Command/
+Supprimerait src/Ecole/FrontBundle/EventListener/
+Supprimerait src/Ecole/FrontBundle/Services/
+Supprimerait src/Ecole/FrontBundle/Twig/
+Supprimerait web/bower_components/

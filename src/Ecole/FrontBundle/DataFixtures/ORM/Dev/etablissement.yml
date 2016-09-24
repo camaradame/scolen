@@ -1,0 +1,7 @@
+Ecole\FrontBundle\Entity\Etablissement:
+
+    etablissement{1..6}:
+        nom: <ecoleName($fake('current')-1)>
+        region: <region($fake('current')-1)>
+        adresse: <adresse($fake('current')-1)>
+        departement: <departement($fake('current')-1)>

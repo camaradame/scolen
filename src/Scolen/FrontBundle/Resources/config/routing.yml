@@ -1,3 +1,0 @@
-scolen_front_homepage:
-    path:     /
-    defaults: { _controller: ScolenFrontBundle:Default:index }
