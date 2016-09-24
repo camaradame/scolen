@@ -1,3 +1,0 @@
-ecole_front_homepage:
-    path:     /
-    defaults: { _controller: EcoleFrontBundle:Default:index }
