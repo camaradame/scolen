@@ -8,16 +8,21 @@
 		<li><a href="buttons.html"><i class="glyphicon glyphicon-record"></i> Buttons</a></li>
 		<li><a href="editors.html"><i class="glyphicon glyphicon-pencil"></i> Editors</a></li>
 		<li><a href="forms.html"><i class="glyphicon glyphicon-tasks"></i> Forms</a></li>
-		<li class="submenu">
-			<a href="#">
-				<i class="glyphicon glyphicon-list"></i> Pages
-				<span class="caret pull-right"></span>
-			</a>
-			<!-- Sub menu -->
-			<ul>
-				<li><a href="login.html">Login</a></li>
-				<li><a href="signup.html">Signup</a></li>
-			</ul>
-		</li>
+
+		{# Administration #}
+		{% if is_granted('IS_AUTHENTICATED_FULLY') and is_granted('ROLE_ADMIN') %}
+			<li class="submenu">
+				<a href="#">
+					<i class="glyphicon glyphicon-list"></i> Admin
+					<span class="caret pull-right"></span>
+				</a>
+				<!-- Sub menu -->
+				<ul>
+					<li><a href="{{ path('ecole_adminUser_index') }}">Users</a></li>
+					<li><a href="#">Scools</a></li>
+				</ul>
+			</li>
+		{% endif %}
+
 	</ul>
 </div>

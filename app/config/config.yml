@@ -5,17 +5,19 @@ imports:
     - { resource: bundles/doctrine.yml }
     - { resource: bundles/twig.yml }
     - { resource: bundles/swiftmailer.yml }
+    - { resource: bundles/fos_user.yml }
     - { resource: "@EcoleFrontBundle/Resources/config/services.yml" }
+    - { resource: "@EcoleBackBundle/Resources/config/services.yml" }
     #- { resource: bundles/hautelook_alice.yml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      ~
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"

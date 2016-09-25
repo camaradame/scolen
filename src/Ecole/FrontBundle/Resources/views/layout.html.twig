@@ -1,0 +1,31 @@
+{% extends ":layout:layout.html.twig" %}
+
+{% block body %}
+    <div class="page-content">
+        <div class="row">
+            {# Navigation #}
+            <div class="col-md-2">
+                {% include ':includes:_navigation.html.twig' %}
+            </div>
+
+            <div class="col-md-10">
+                {% for flashMessage in app.session.flashbag.get('success') %}
+                    <div class="alert alert-success">
+                        {{ flashMessage }}
+                    </div>
+                {% endfor %}
+                {% block body_content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <div class="container">
+            <div class="copy text-center">
+                Copyright 2014 <a href='#'>Website</a>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

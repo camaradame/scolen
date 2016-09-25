@@ -1,0 +1,9 @@
+#user:
+#    resource: "@UserBundle/Resources/config/routing/user_routing.yml"
+#    prefix:   /user
+#
+user_adminUser:
+    resource: "@EcoleUserBundle/Resources/config/routing/adminUser_routing.yml"
+    prefix:   /
+
+

@@ -1,18 +1,17 @@
 <?php
 
-namespace Ecole\FrontBundle\Tests\Controller;
+namespace Ecole\BackBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class EcoleControllerTest extends WebTestCase
+class DefaultControllerTest extends WebTestCase
 {
     public function testIndex()
     {
         $client = static::createClient();
 
         $crawler = $client->request('GET', '/');
+
+        $this->assertContains('Hello World', $client->getResponse()->getContent());
     }
-
-
-
 }

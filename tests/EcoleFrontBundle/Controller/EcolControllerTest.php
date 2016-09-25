@@ -12,6 +12,10 @@ class EcolControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertContains('Hello World', $client->getResponse()->getContent());
+        $this->assertContains('sénégalaises', $client->getResponse()->getContent());
+    }
+
+    public function testNumber(){
+        $this->assertEquals(1, 1);
     }
 }

@@ -1,0 +1,21 @@
+Ecole\UserBundle\Entity\User:
+    user1:
+        username: bobo
+        email: bobodiallobe@gmail.com
+        enabled: 1
+        plainpassword: bdiallo
+        usernameCanonical: <identity($username)>
+
+    user2:
+        username: dame
+        email: <email()>
+        enabled: 1
+        plainpassword: dame
+        usernameCanonical: <identity($username)>
+
+    user3:
+        username: abou
+        email: <email()>
+        enabled: 0
+        plainpassword: bdiallo
+        usernameCanonical: <identity($username)>
