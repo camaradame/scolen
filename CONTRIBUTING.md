@@ -2,9 +2,40 @@ Guide du contributeur
 =====================
 
 
-1. Forker le projet sur github
-2. cloner le projet : git clone https://github.com/adashbob/scolen
-3. Installer les bundles externes: cd scolen; php composer install
-4. Créer une nouvelle branche: _git branch branch-name_
-5. Pusher sur cette branche
-6. faire un pull request
+- Forker le projet sur github
+- Cloner le projet : 
+```
+git clone https://github.com/adashbob/scolen
+```
+- Installer les bundles externes: (installer d'abord composer et bower); 
+```
+cd scolen
+composer install
+bower install
+```
+- Créer une nouvelle branche: 
+```
+git branch branch-name
+```
+- Pusher sur cette branche
+- Faire un pull request
+
+
+## Configuration de l'application
+
+- Copier le fichier app/config/parameters.yml.dist dans app/config/parameters.yml
+- Renseigner les parametres de votre base de données
+- Générer les tables
+```
+php bin/console doctrine:schema:create
+```
+- Ajouter les datafixures
+```
+ php bin/console h:d:f:l
+```
+- Pour avoir les différentes routes de l'application
+```
+php bin/console debug:router
+```
+
+
