@@ -18,12 +18,7 @@
 
     <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
 
-	  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	  <!--[if lt IE 9]>
-	  <script src="{{ asset('bower_components/html5shiv/dist/html5shiv.min.js') }}"></script>
-	  <script src="{{ asset('bower_components/respond/dest/respond.min.js') }}"></script>
-	  <![endif]-->
+	  {% include '_resolveIE.html.twig' %}
   </head>
   <body>
   	<div class="header">
@@ -32,36 +27,17 @@
 	           <div class="col-md-5">
 	              <!-- Logo -->
 	              <div class="logo">
-	                 <h1><a href="index.html">Bootstrap Admin Theme</a></h1>
+	                 <h1><a href="index.html">Scolen</a></h1>
 	              </div>
 	           </div>
-	           <div class="col-md-5">
-	              <div class="row">
-	                <div class="col-lg-12">
-	                  <div class="input-group form">
-	                       <input type="text" class="form-control" placeholder="Search...">
-	                       <span class="input-group-btn">
-	                         <button class="btn btn-primary" type="button">Search</button>
-	                       </span>
-	                  </div>
-	                </div>
-	              </div>
-	           </div>
-	           <div class="col-md-2">
-	              <div class="navbar navbar-inverse" role="banner">
-	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
-	                    <ul class="nav navbar-nav">
-	                      <li class="dropdown">
-	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
-	                        <ul class="dropdown-menu animated fadeInUp">
-	                          <li><a href="profile.html">Profile</a></li>
-	                          <li><a href="login.html">Logout</a></li>
-	                        </ul>
-	                      </li>
-	                    </ul>
-	                  </nav>
-	              </div>
-	           </div>
+				{# Formaulaire de recherche #}
+				<div class="col-md-5">
+					{#{% include ':includes:_frmSearch.html.twig' %}#}
+				</div>
+				{# Connexion #}
+				<div class="col-md-2">
+					{% include ':includes:_connexion.html.twig' %}
+				</div>
 	        </div>
 	     </div>
 	</div>

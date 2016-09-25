@@ -5,15 +5,17 @@
          xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.8/phpunit.xsd"
          backupGlobals="false"
          colors="true"
-         bootstrap="app/autoload.php">
+         bootstrap="autoload.php">
     <php>
         <ini name="error_reporting" value="-1" />
-        <server name="KERNEL_DIR" value="app/" />
+        <server name="KERNEL_DIR" value="../app/" />
     </php>
 
     <testsuites>
         <testsuite name="Scolen Test Suite">
-            <directory>tests</directory>
+            <directory>../src/*/FrontBundle/Tests/Controller/</directory>
+            <!--<directory>../src/*/BackBundle/Tests/Controller/</directory>
+            <directory>../src/*/UserBundle/Tests/Controller/</directory>-->
         </testsuite>
     </testsuites>
 
